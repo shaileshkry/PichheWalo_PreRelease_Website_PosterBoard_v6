@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 
 /* =========================================================
    Header / Top Bar
@@ -167,8 +169,6 @@
     font-size: 10px;
   }
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
   --bg: #ffffff;
@@ -541,7 +541,7 @@ footer .brand-mark { width: 27px; height: 27px; border-radius: 7px; font-size: 1
 .media-card video {
   display: block;
   width: 100%;
-  height: 50%;
+  height: 100%;
   min-height: 320px;
   object-fit: cover;
   background: #eef2f7;
@@ -734,7 +734,7 @@ main {
 }
 
 .poster-main h1 {
-  font-size: clamp(30px, 8vw, 90px);
+  font-size: clamp(60px, 8vw, 105px);
   color: #172554;
   margin: 18px 0 4px;
   letter-spacing: -.075em;
@@ -769,7 +769,7 @@ main {
   color: #111827;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 800;
-  font-size: clamp(50px, 2.5vw, 70px);
+  font-size: clamp(20px, 2.5vw, 32px);
   transform: rotate(-2deg);
   box-shadow: 4px 5px 0 rgba(17,24,39,.08);
 }
@@ -1142,5 +1142,389 @@ main {
   }
   .email-card > a {
     margin-left: 53px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE / TABLET OVERRIDES — v7
+   ========================================================= */
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 1100px) {
+  .poster-board {
+    width: min(100% - 24px, 1000px);
+    gap: 18px;
+    padding: 28px 20px 24px;
+  }
+
+  .mini-poster {
+    padding: 26px;
+  }
+
+  .poster-main h1 {
+    font-size: clamp(52px, 8vw, 82px);
+  }
+
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    width: calc(100% - 24px);
+    min-height: 64px;
+    height: auto;
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-socials {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .nav-cta {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+
+  .poster-board {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    min-height: auto;
+    margin-top: 20px;
+    margin-bottom: 65px;
+  }
+
+  .poster-main {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 520px;
+  }
+
+  .poster-impact {
+    grid-column: 1 / -1;
+    display: flex;
+  }
+
+  .poster-impact p {
+    max-width: none;
+  }
+
+  .audience {
+    grid-template-columns: 1fr;
+    padding-bottom: 85px;
+  }
+
+  .audience-card {
+    min-height: 300px;
+    padding: 34px;
+  }
+
+  .coming-inner {
+    padding: 45px;
+  }
+
+  .connect-content {
+    padding: 36px;
+  }
+
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    width: calc(100% - 16px);
+  }
+
+  .header-socials a:nth-child(n+2) {
+    display: none;
+  }
+
+  .nav-cta {
+    min-height: 32px;
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  .poster-board {
+    width: calc(100% - 16px);
+    margin: 12px auto 50px;
+    padding: 18px 10px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 6px;
+  }
+
+  .mini-poster,
+  .poster-main,
+  .poster-teachers,
+  .poster-students,
+  .poster-impact {
+    width: 100%;
+    transform: none;
+  }
+
+  .mini-poster {
+    padding: 24px 20px;
+  }
+
+  .poster-main {
+    min-height: 0;
+    padding: 36px 24px 30px;
+  }
+
+  .poster-main h1 {
+    font-size: clamp(46px, 15vw, 70px);
+    line-height: .98;
+    overflow-wrap: anywhere;
+  }
+
+  .poster-tagline {
+    font-size: clamp(17px, 5vw, 22px);
+  }
+
+  .yellow-highlight {
+    max-width: 100%;
+    padding: 9px 18px;
+    font-size: clamp(18px, 5vw, 25px);
+  }
+
+  .poster-main > p:not(.poster-tagline) {
+    font-size: 14px;
+  }
+
+  .poster-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .poster-teachers h2,
+  .poster-students h2,
+  .poster-impact h2 {
+    font-size: clamp(25px, 8vw, 34px);
+  }
+
+  .poster-impact {
+    display: block;
+  }
+
+  .poster-impact .poster-icon {
+    float: none;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .section,
+  .poster-section {
+    width: calc(100% - 16px);
+  }
+
+  .intro {
+    padding: 55px 0 35px;
+  }
+
+  .intro h2,
+  .coming h2,
+  .connect h2 {
+    font-size: clamp(31px, 9vw, 43px);
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-bottom: 75px;
+  }
+
+  .poster-features .feature-card {
+    min-height: 240px;
+    padding: 23px;
+    transform: none !important;
+  }
+
+  .feature-icon {
+    margin-bottom: 30px;
+  }
+
+  .audience {
+    gap: 14px;
+    padding-bottom: 75px;
+  }
+
+  .audience-card {
+    min-height: 0;
+    padding: 28px 22px;
+  }
+
+  .audience-card h2 {
+    font-size: clamp(29px, 8vw, 38px);
+  }
+
+  .coming {
+    padding-bottom: 75px;
+  }
+
+  .coming-inner {
+    padding: 32px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .coming-badge {
+    align-self: center;
+  }
+
+  .media-showcase {
+    padding-bottom: 60px;
+  }
+
+  .media-card,
+  .media-card img,
+  .media-card video {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+  }
+
+  .connect {
+    padding-top: 20px;
+  }
+
+  .connect-content {
+    padding: 30px 20px;
+    transform: none;
+  }
+
+  .email-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+
+  .email-card > div {
+    min-width: 0;
+  }
+
+  .email-card > a {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .final-cta {
+    width: calc(100% - 16px);
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-socials {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    min-height: 58px;
+    padding: 7px 8px;
+  }
+
+  .brand {
+    gap: 7px;
+    font-size: 16px;
+  }
+
+  .brand-mark {
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+  }
+
+  .header-socials a {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .poster-main {
+    padding: 30px 18px 24px;
+  }
+
+  .mini-poster {
+    padding: 21px 17px;
+  }
+
+  .poster-board {
+    gap: 13px;
+  }
+
+  .poster-teachers ul,
+  .poster-students ul {
+    font-size: 12px;
+  }
+
+  .poster-button {
+    padding: 12px 15px;
+  }
+
+  .section-heading-poster,
+  .strip-poster {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .strip-poster {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .feature-card {
+    min-height: 220px;
+  }
+
+  .audience-card {
+    padding: 24px 18px;
+  }
+
+  .connect-content {
+    padding: 26px 16px;
   }
 }
