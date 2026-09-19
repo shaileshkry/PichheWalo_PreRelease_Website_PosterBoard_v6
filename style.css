@@ -1528,3 +1528,23 @@ a {
     padding: 26px 16px;
   }
 }
+
+
+/* =========================================================
+   Google Form
+   ========================================================= */
+
+.google-form-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.google-form-container iframe {
+  display: block;
+  width: 100%;
+  min-height: 1351px;
+  border: 0;
+}
